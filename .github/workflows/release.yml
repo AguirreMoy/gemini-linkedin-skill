@@ -16,8 +16,8 @@ jobs:
 
       - name: Package Skill
         run: |
-          # The .skill file is a zip of the skill directory contents
-          cd linkedin-post-skill && zip -r ../linkedin-post-skill.skill ./*
+          # Zip the skill files from the root
+          zip -r linkedin-post-skill.skill SKILL.md scripts/
 
       - name: Create Release
         uses: softprops/action-gh-release@v2
