@@ -12,10 +12,10 @@ A specialized skill for the [Gemini CLI](https://github.com/google/gemini-cli) t
 
 ## Installation
 
-Install the skill directly from the latest release:
+Install the skill directly from the repository:
 
 ```bash
-gemini skills install https://github.com/AguirreMoy/gemini-linkedin-skill/releases/latest/download/linkedin-post-skill.skill --scope user
+gemini skills install https://github.com/AguirreMoy/gemini-linkedin-skill --scope user
 ```
 
 Then, reload your skills in an interactive Gemini session:
