@@ -1,0 +1,28 @@
+name: Release Skill
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Package Skill
+        run: |
+          # The .skill file is a zip of the skill directory contents
+          cd linkedin-post-skill && zip -r ../linkedin-post-skill.skill ./*
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: linkedin-post-skill.skill
+          generate_release_notes: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
