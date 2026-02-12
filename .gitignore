@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Gemini CLI Temp files
+.gemini/
+
+# Packaged skill (optional to ignore if you want users to download from releases)
+# *.skill
